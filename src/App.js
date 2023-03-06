@@ -49,7 +49,7 @@ function App() {
    return (
       <div className="App">
          <div className="TodoContainer">
-            <h1>To-do List</h1>
+            <h1>List and Track</h1>
             <div className="ListContainer">
                <ProgressBar listItems={listItems} />
                {listItems.map((item) => {
@@ -58,6 +58,7 @@ function App() {
                <button onClick={addItemClickHandler} className="AddItemButton">
                   Add Item
                </button>
+               <span className={`StartMessage ${listItems.length > 0 ? "Hidden" : ""}`}>Add a to-do item to start. Track your progress as you go!</span>
             </div>
          </div>
       </div>

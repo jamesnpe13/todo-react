@@ -16,7 +16,7 @@ export default function ProgressBar({ listItems }) {
    }
 
    return (
-      <div className="ProgressBar">
+      <div className={`ProgressBar ${listItems.length === 0 ? "Hidden" : ""}`}>
          <p>{progressPercentage}%</p>
          <div className="OuterBar">
             <div className="InnerBar" style={{ width: `${progressPercentage}%` }}></div>
